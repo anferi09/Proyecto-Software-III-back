@@ -1,0 +1,5 @@
+package co.edu.uniquindio.proyecto.entidades;
+
+public enum Tipo {
+    ORTODONCIA, REHABILITACION_ORAL,PERIODONCIA, ENDODONCIA, CIRUGIA_ORAL, ODONTOPEIATRIA, ESTETICA_DENTAL , LIMPIEZA_DENTAL
+}
