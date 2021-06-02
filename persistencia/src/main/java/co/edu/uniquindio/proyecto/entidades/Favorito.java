@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class Favorito implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_favorito")
     private int id;
 
     @ManyToOne

@@ -46,9 +46,9 @@ public class Clinica implements Serializable {
     @JoinColumn(name = "id_moderador", nullable = false)
     private Moderador moderador;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "id_usuario", nullable = false)
-    private Usuario usuario;
+    private List<Usuario> usuarios;
 
     @ManyToOne
     @JoinColumn(name = "id_agenda", nullable = false)
@@ -202,12 +202,12 @@ public class Clinica implements Serializable {
         this.ciudad = ciudad;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public List<Usuario> getUsuarios() {
+        return usuarios;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 
     public Moderador getModerador() {

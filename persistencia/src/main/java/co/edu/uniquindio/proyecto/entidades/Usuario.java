@@ -20,8 +20,9 @@ public class Usuario extends Persona{
     @JoinColumn(name = "id_ciudad", nullable = false)
     private Ciudad ciudad;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Clinica> clinicas;
+    @ManyToOne
+    @JoinColumn(name = "usuario", nullable = false)
+    private Clinica clinica;
 
     @OneToMany(mappedBy = "usuario")
     private List<Favorito> favoritos;
@@ -57,11 +58,11 @@ public class Usuario extends Persona{
         this.ciudad = ciudad;
     }
 
-    public void setClinicas(List<Clinica> clinicas) {
-        this.clinicas = clinicas;
+    public void setClinica(Clinica clinica) {
+        this.clinica = clinica;
     }
 
-    public List<Clinica> getClinicas() {  return clinicas;   }
+    public Clinica getClinica() {  return clinica;   }
 
     public List<Favorito> getFavoritos() {
         return favoritos;
@@ -123,7 +124,9 @@ public class Usuario extends Persona{
 
     public void setFechaNacimiento(Date fechaNacimiento) {  this.fechaNacimiento = fechaNacimiento;  }
 
-    public Agenda getAgendas() {  return agenda;   }
+    public Agenda getAgenda() {  return agenda;   }
 
-    public void setAgendas(Agenda agenda) { this.agenda = agenda;  }
+    public void setAgenda(Agenda agenda) { this.agenda = agenda;  }
+
+
 }

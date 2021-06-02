@@ -8,7 +8,7 @@ import java.util.Date;
 public class Recomendacion implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_recomendacion")
     private int id;
 
     @ManyToOne

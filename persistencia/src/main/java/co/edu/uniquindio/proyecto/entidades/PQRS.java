@@ -8,7 +8,7 @@ import java.util.Date;
 public class PQRS implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_pqrs")
     private int id;
 
     @ManyToOne
